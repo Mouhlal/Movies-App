@@ -61,45 +61,45 @@ export default function Home() {
                 </Carousel>
               </div> */}
             <Card className="mt-9 w-96 relative top-24 " key={ser.id}>
-              <CardHeader color="blue-gray" className="relative h-56">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${ser.backdrop_path}`}
-                  alt={ser.title}
-                />
-              </CardHeader>
-              <CardBody>
-                <Typography color="blue-gray" className="mb-2">
-                  <b>
+              <Link to={`/details/${ser.id}`}>
+                <CardHeader color="blue-gray" className="relative h-56">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${ser.backdrop_path}`}
+                    alt={ser.title}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Typography color="blue-gray" className="mb-2">
                     <b>
-                      <b>{ser.title}</b>
+                      <b>
+                        <b>{ser.title}</b>
+                      </b>
                     </b>
-                  </b>
-                </Typography>
-              </CardBody>
-              <CardFooter className="pt-0">
-                <Link to={`/details/${ser.id}`}>
-                  <Button
-                    variant="text"
-                    className="flex items-center gap-2 bg-black text-white"
-                  >
-                    Read More{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-5 w-5"
+                  </Typography>
+                </CardBody>
+                <CardFooter className="pt-0">
+                    <Button
+                      variant="text"
+                      className="flex items-center gap-2 bg-black text-white"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </Button>
-                </Link>
-              </CardFooter>
+                      Read More{" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                        />
+                      </svg>
+                    </Button>
+                </CardFooter>
+              </Link>
             </Card>
           </div>
         );

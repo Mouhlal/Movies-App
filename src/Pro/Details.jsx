@@ -48,7 +48,7 @@ export default function Details() {
             target="_blank"
             className="hover:text-red-600 text-black md:inline-block md:left-1/2 text-center md:relative"
           >
-            <p className="text-3xl md:w-96 underline md:text-center md:-right-36 md:bottom-11 p-4 relative text-center m-8 bottom-11">
+            <p className="text-3xl md:w-96 underline md:text-center  md:bottom-11 p-4 relative text-center m-8 bottom-11">
               {" "}
               {movieDetails.title}{" "}
             </p>

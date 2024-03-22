@@ -10,6 +10,7 @@ import {
 import axios from "axios";
 export default function Header() {
   const [open, setOpen] = useState(true);
+  
   const [search, setSearch] = useState("");
   const nav = useNavigate();
 

@@ -69,7 +69,11 @@ export default function Home() {
               </CardHeader>
               <CardBody>
                 <Typography color="blue-gray" className="mb-2">
-                  <b>{ser.title}</b>
+                  <b>
+                    <b>
+                      <b>{ser.title}</b>
+                    </b>
+                  </b>
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">

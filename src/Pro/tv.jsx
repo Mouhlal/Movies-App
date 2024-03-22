@@ -41,7 +41,7 @@ export default function Tv() {
               </CardHeader>
               <CardBody>
                 <Typography color="blue-gray" className="mb-2">
-                  <b>{ser.name}</b>
+                  <b><b><b>{ser.name}</b></b></b>
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">

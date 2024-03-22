@@ -19,7 +19,7 @@ export default function Header() {
       const url = `https://api.themoviedb.org/3/search/multi?api_key=88b60c5482edd09652277b85a70bde63&query=${search}`;
       const response = await axios.get(url);
       const data = response.data.results;
-      console.log("Search Results:", data);
+      //console.log("Search Results:", data);
       nav(`/search?query=${search}`, { state: { results: data } });
     } catch (error) {
       console.log("Error:", error);

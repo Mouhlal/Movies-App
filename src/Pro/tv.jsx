@@ -18,7 +18,7 @@ export default function Tv() {
     try {
       const { data } = await axios.get(url);
       setSeries(data.results);
-      console.log(data.results);
+      //console.log(data.results);
     } catch (error) {
       console.log("Error fetching data:", error);
     }

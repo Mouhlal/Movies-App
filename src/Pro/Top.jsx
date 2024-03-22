@@ -34,8 +34,9 @@ export default function Top() {
     <div className="md:flex overflow-x-hidden md:overflow-visible md:flex-row m-3 md:justify-around md:items-center flex-wrap relative  md:gap-2">
       {rate.results &&
         rate.results.map((ser) => (
-          <div key={ser.id}>
-            <Card className="mt-9 w-96 relative top-24 ">
+          <div>
+            <Card className="mt-9 w-96 relative top-24" key={ser.id}>
+            <Link to={`/detailstv/${ser.id}`}>
               <CardHeader color="blue-gray" className="relative h-56">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${ser.backdrop_path}`}
@@ -48,7 +49,6 @@ export default function Top() {
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-                <Link to={`/detailstv/${ser.id}`}>
                   <Button
                     variant="text"
                     className="flex items-center gap-2 bg-black text-white"
@@ -69,8 +69,9 @@ export default function Top() {
                       />
                     </svg>
                   </Button>
-                </Link>
               </CardFooter>
+              </Link>
+
             </Card>
           </div>
         ))}

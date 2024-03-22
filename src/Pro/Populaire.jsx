@@ -15,7 +15,8 @@ export default function Populaire() {
   const { id } = useParams();
   const [pop, setPop] = useState([]);
 
-  const url ="https://api.themoviedb.org/3/trending/tv/day?api_key=88b60c5482edd09652277b85a70bde63";
+  const url =
+    "https://api.themoviedb.org/3/trending/tv/day?api_key=88b60c5482edd09652277b85a70bde63";
   //const url2 = "https://api.themoviedb.org/3/trending/movie/day?api_key=88b60c5482edd09652277b85a70bde63"
 
   const getapi = async () => {
@@ -48,22 +49,22 @@ export default function Populaire() {
     <div className="md:flex overflow-x-hidden md:overflow-visible md:flex-row m-3 md:justify-around md:items-center flex-wrap relative  md:gap-2">
       {pop.results &&
         pop.results.map((ser) => (
-          <div key={ser.id}>
-            <Card className="mt-9 w-96 relative top-24 ">
-              <CardHeader color="blue-gray" className="relative h-56">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${ser.backdrop_path}`}
-                  alt={ser.name}
-                />
-              </CardHeader>
-              <CardBody>
-                <Typography color="blue-gray" className="mb-2">
-                  <b>{ser.name}</b>
-                </Typography>
-              </CardBody>
-              <CardFooter className="pt-0">
-                <Link to={`/detailstv/${ser.id}`}>
-                <Button
+          <div>
+            <Card className="mt-9 w-96 relative top-24" key={ser.id}>
+              <Link to={`/detailstv/${ser.id}`}>
+                <CardHeader color="blue-gray" className="relative h-56">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${ser.backdrop_path}`}
+                    alt={ser.name}
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Typography color="blue-gray" className="mb-2">
+                    <b>{ser.name}</b>
+                  </Typography>
+                </CardBody>
+                <CardFooter className="pt-0">
+                  <Button
                     variant="text"
                     className="flex items-center gap-2 bg-black text-white"
                   >
@@ -83,8 +84,8 @@ export default function Populaire() {
                       />
                     </svg>
                   </Button>
-                </Link>
-              </CardFooter>
+                </CardFooter>
+              </Link>
             </Card>
           </div>
         ))}

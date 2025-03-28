@@ -11,6 +11,8 @@ Currently, two official plugins are available:
 
 **Movies-App** est une application web permettant aux utilisateurs de découvrir des films et séries populaires avec leurs détails (titres, affiches, notes, synopsis, etc.). Elle est développée avec **React.js**, utilise une API pour récupérer les informations des films et offre une interface utilisateur moderne et intuitive.  
 
+📍 Site en ligne : [nutstree.ma](https://akrmovies.netlify.app/)
+
 ---
 ## ✨ Fonctionnalités principales  
 
